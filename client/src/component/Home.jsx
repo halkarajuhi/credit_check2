@@ -64,7 +64,7 @@ export default function Home() {
     if(btnRef.current){
       btnRef.current.setAttribute("disabled", "disabled");
     }
-    fetch(`${API_URL}/${EMAILSEND}`, {
+    fetch(`${EMAILSEND}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(emailverify)
@@ -114,7 +114,7 @@ export default function Home() {
 
   async function login(e) {
 
-    return fetch(`${API_URL}/${LOGIN}`, {
+    return fetch(`${LOGIN}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -153,7 +153,7 @@ export default function Home() {
   async function Guestlogin(e) {
     e.preventDefault();
 
-    return fetch('https://credit-check-1.herokuapp.com/login/guestlogin', {
+    return fetch('/login/guestlogin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
