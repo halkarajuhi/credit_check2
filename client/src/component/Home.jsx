@@ -153,7 +153,7 @@ export default function Home() {
   async function Guestlogin(e) {
     e.preventDefault();
 
-    return fetch('/login/guestlogin', {
+    return fetch(`${GUESTLOGIN}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
