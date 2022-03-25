@@ -34,7 +34,7 @@ export const ITEM_DETAIL = "stripetrial/item_detail";
 
 
 
-export const API_URL = process.env.API_URL;
+export const API_URL = "https://credit-check-1.herokuapp.com/";
 
 
 export const CHAT_URL = process.env.REACT_APP_CHAT_URL
