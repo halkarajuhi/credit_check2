@@ -35,14 +35,12 @@ app.use((err, req, res, next) => {
   });
 });
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
-// Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
+ app.get("*", (req, res) => {
+  let url = path.join(__dirname, '../client/build', 'index.html');
+  if (!url.startsWith('/app/')) // since we're on local windows
+    url = url.substring(1);
+  res.sendFile(url);
+});
 
 
 var registration = require('./registration.js');
