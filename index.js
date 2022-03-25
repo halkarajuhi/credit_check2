@@ -21,7 +21,8 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({
   extended: true
 }));
-const port = process.env.PORT ;
+
+const port = process.env.PORT || 5000 ;
 app.use(cors());
 const { check } = require('express-validator');
 // Handling Errors
