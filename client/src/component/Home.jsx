@@ -153,7 +153,7 @@ export default function Home() {
   async function Guestlogin(e) {
     e.preventDefault();
 
-    return fetch('https://credit-check-1.herokuapp.com/guestlogin', {
+    return fetch('https://credit-check-1.herokuapp.com/login/guestlogin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
