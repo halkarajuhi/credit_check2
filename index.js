@@ -22,7 +22,7 @@ app.use(bodyparser.urlencoded({
   extended: true
 }));
 
-const port = process.env.PORT || 5000 ;
+const port = process.env.PORT || 8080 ;
 app.use(cors());
 const { check } = require('express-validator');
 // Handling Errors
